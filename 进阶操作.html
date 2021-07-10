@@ -1,0 +1,409 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>进阶操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="唐浩晋 <tanghaojin@outlook.com>; 陈璐; 高泽宇">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="开发流程和规范.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="基本操作.html">
+            
+                <a href="基本操作.html">
+            
+                    
+                    基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="开发流程和规范.html">
+            
+                <a href="开发流程和规范.html">
+            
+                    
+                    开发流程和规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="进阶操作.html">
+            
+                <a href="进阶操作.html">
+            
+                    
+                    进阶操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >进阶操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FDB;&#x9636;&#x64CD;&#x4F5C;">&#x8FDB;&#x9636;&#x64CD;&#x4F5C;</h1>
+<p>&#x8BFB;&#x5230;&#x8FD9;&#x91CC;, &#x4F60;&#x5E94;&#x8BE5;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x89C4;&#x8303;&#x5730;&#x4F7F;&#x7528; git &#x6765;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x4E86;. &#x4F46;&#x662F;, &#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x8BA9;&#x4F60;&#x68D8;&#x624B;&#x7684;&#x95EE;&#x9898;:</p>
+<ul>
+<li>&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x4E0D;&#x5C0F;&#x5FC3;&#x5199;&#x9519;&#x4E86;</li>
+<li>&#x60F3;&#x8981;&#x5C06;&#x53E6;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x7684;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x201C;&#x590D;&#x5236;&#x201D;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</li>
+<li>&#x53EA;&#x60F3;&#x5C06;&#x5DE5;&#x4F5C;&#x533A;&#x67D0;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x4FEE;&#x6539;&#x6682;&#x5B58;</li>
+<li>&#x4E0D;&#x5C0F;&#x5FC3;&#x6682;&#x5B58;&#x4E86;&#x4E0D;&#x60F3;&#x6682;&#x5B58;&#x7684;&#x6587;&#x4EF6;, &#x60F3;&#x8981;&#x53D6;&#x6D88;&#x6682;&#x5B58;</li>
+<li>&#x60F3;&#x8981;&#x5C06;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x8FD8;&#x539F;&#x5230;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x72B6;&#x6001;</li>
+<li>&#x64A4;&#x56DE;&#x4E00;&#x6B21;&#x6216;&#x591A;&#x6B21;&#x63D0;&#x4EA4;</li>
+<li>&#x53EA;&#x60F3;&#x5408;&#x5E76;&#x90E8;&#x5206; commit &#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5206;&#x652F;</li>
+<li>commit &#x592A;&#x8FC7;&#x96F6;&#x788E;, &#x60F3;&#x8981;&#x628A;&#x591A;&#x4E2A; commit &#x5408;&#x4E3A;&#x4E00;&#x4E2A;, &#x6216;&#x662F;&#x8DF3;&#x8FC7;&#x67D0;&#x4E9B; commit</li>
+</ul>
+<p>&#x8981;&#x60F3;&#x7B80;&#x5355;&#x65B9;&#x4FBF;&#x5730;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;, &#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E00;&#x4E9B;&#x8FDB;&#x9636;&#x7684;&#x64CD;&#x4F5C;&#x4E86;.</p>
+<h2 id="&#x5BF9;&#x5DF2;&#x6709;&#x7684;-commit-&#x8FDB;&#x884C;&#x4FEE;&#x6539;">&#x5BF9;&#x5DF2;&#x6709;&#x7684; commit &#x8FDB;&#x884C;&#x4FEE;&#x6539;</h2>
+<h3 id="&#x4FEE;&#x6B63;&#x6700;&#x8FD1;&#x7684;&#x4E00;&#x6B21;-commit">&#x4FEE;&#x6B63;&#x6700;&#x8FD1;&#x7684;&#x4E00;&#x6B21; commit</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x53D1;&#x73B0;, &#x6700;&#x65B0;&#x7684; commit &#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x9519;&#x8BEF;, &#x60F3;&#x8981;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x4FEE;&#x6B63;, &#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x4FEE;&#x6539;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x6682;&#x5B58;,
+&#x7136;&#x540E;&#x8FD0;&#x884C; <code>git commit --amend</code> &#x5373;&#x53EF;.</p>
+<p>&#x4F46;&#x662F;, &#x5982;&#x679C;&#x4F60;&#x60F3;&#x4FEE;&#x6539;&#x597D;&#x51E0;&#x6B21;&#x63D0;&#x4EA4;&#x4E4B;&#x524D;&#x7684;&#x9519;&#x8BEF;, &#x90A3;&#x5C31;&#x53EA;&#x80FD;&#x591F;&#x5148;&#x64A4;&#x56DE; commit &#x4E86;.</p>
+<h3 id="&#x64A4;&#x56DE;&#x6700;&#x65B0;&#x7684;-commit">&#x64A4;&#x56DE;&#x6700;&#x65B0;&#x7684; commit</h3>
+<p>&#x8981;&#x64A4;&#x56DE;&#x6700;&#x65B0;&#x7684; commit, &#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git reset --hard HEAD^</code> &#x547D;&#x4EE4;.</p>
+<h3 id="&#x64A4;&#x56DE;&#x8FDE;&#x7EED;&#x7684;&#x591A;&#x4E2A;-commit">&#x64A4;&#x56DE;&#x8FDE;&#x7EED;&#x7684;&#x591A;&#x4E2A; commit</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x64A4;&#x56DE;&#x591A;&#x4E2A; commit, &#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git reset --hard HEAD~n</code> &#x547D;&#x4EE4;, &#x5176;&#x4E2D; <code>n</code>
+&#x4EE3;&#x8868;&#x64A4;&#x56DE; commit &#x7684;&#x4E2A;&#x6570;.</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;, &#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git rebase -i HEAD~n</code> &#x547D;&#x4EE4;&#x6765;&#x4EA4;&#x4E92;&#x5F0F;&#x5730;&#x5BF9;&#x4E4B;&#x524D;&#x7684; <code>n</code> &#x6B21; commit
+&#x8FDB;&#x884C;&#x4FEE;&#x6539;, &#x5408;&#x5E76;, &#x8DF3;&#x8FC7;&#x7B49;&#x64CD;&#x4F5C;.</p>
+<h2 id="&#x5408;&#x5E76;&#x5206;&#x652F;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x63D0;&#x4EA4;">&#x5408;&#x5E76;&#x5206;&#x652F;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x63D0;&#x4EA4;</h2>
+<p><code>git merge</code> &#x4F1A;&#x5C06;&#x6240;&#x6709;&#x7684;&#x66F4;&#x6539;&#x90FD;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;, &#x4F46;&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x5408;&#x5E76;&#x90E8;&#x5206; commit &#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;.
+&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git cherry-pick</code> &#x547D;&#x4EE4;.</p>
+<p>&#x901A;&#x8FC7; <code>git cherry-pick &lt;commitHash&gt;</code> &#x53EF;&#x4EE5;&#x5C06;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;,
+&#x5E76;&#x5728;&#x5F53;&#x524D;&#x5206;&#x652F;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x63D0;&#x4EA4;. &#x5F53;&#x7136;, &#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x5408;&#x5E76;&#x591A;&#x4E2A;&#x63D0;&#x4EA4;, &#x53EA;&#x9700;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x63D0;&#x4EA4;&#x5373;&#x53EF;.</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5408;&#x5E76;&#x67D0;&#x51E0;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x63D0;&#x4EA4;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;, &#x53EF;&#x4EE5;&#x6267;&#x884C; <code>git cherry-pick &lt;commit1&gt;..&lt;commit2&gt;</code>
+&#x547D;&#x4EE4;. <code>commit 1</code> &#x5FC5;&#x987B;&#x65E9;&#x4E8E; <code>commit 2</code>, &#x5E76;&#x4E14; <code>commit1</code> &#x5C06;&#x4E0D;&#x88AB;&#x5408;&#x5E76;, <code>commit2</code> &#x5C06;&#x88AB;&#x5408;&#x5E76;.</p>
+<h2 id="&#x5C06;&#x67D0;&#x5206;&#x652F;&#x67D0;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;">&#x5C06;&#x67D0;&#x5206;&#x652F;&#x67D0;&#x6587;&#x4EF6;&#x201C;&#x590D;&#x5236;&#x201D;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</h2>
+<p><code>git checkout</code> &#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5207;&#x6362;&#x5206;&#x652F;&#x4EE5;&#x5916;, &#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5C06;&#x67D0;&#x5206;&#x652F;&#x7684;&#x67D0;&#x6587;&#x4EF6;&#x201C;&#x590D;&#x5236;&#x201D;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;.
+&#x53EA;&#x9700;&#x4F7F;&#x7528; <code>git checkout [branch-src] -- &lt;file&gt;</code> &#x5373;&#x53EF;. </p>
+<p>&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x4F1A;&#x5C06; <code>branch-src</code> &#x5206;&#x652F;&#x6216;&#x63D0;&#x4EA4;&#x7684; <code>file</code> &#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x4E4B;&#x4E2D;. &#x5982;&#x679C;&#x7701;&#x7565;&#x4E86;
+<code>branch-src</code> &#x53C2;&#x6570;, &#x5219;&#x9ED8;&#x8BA4;&#x6307;&#x5B9A;&#x4E3A;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;.</p>
+<h2 id="&#x6682;&#x5B58;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x6539;&#x52A8;">&#x6682;&#x5B58;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x6539;&#x52A8;</h2>
+<p>&#x901A;&#x8FC7; <code>git add -p &lt;file&gt;</code> &#x53EF;&#x4EE5;&#x6682;&#x5B58;&#x6587;&#x4EF6;&#x7684;&#x7279;&#x5B9A;&#x90E8;&#x5206;. &#x4F8B;&#x5982;:</p>
+<pre><code class="lang-git">$ git add -p playground/sim/src/cpu/csrcs/uart.cpp
+diff --git a/playground/sim/src/cpu/csrcs/uart.cpp b/playground/sim/src/cpu/csrcs/uart.cpp
+index 4d20a84..7f6caa1 100644
+--- a/playground/sim/src/cpu/csrcs/uart.cpp
++++ b/playground/sim/src/cpu/csrcs/uart.cpp
+@@ -5,7 +5,26 @@
+ #define FIFO_SIZE 1024
+ static char fifo[FIFO_SIZE] = {0};
+ static short head = 0, tail = 0;
+-bool uart_isRunning = false;
++static bool uart_isRunning = false, divisor_latch = false;
++static bool receive_interrupt = false;
++static char scratch = 0;
++
++enum {
++  Receive_Holding  = 0b000,
++  Interrupt_Status = 0b010,
++  Line_Status      = 0b101,
++  Modem_Status     = 0b110,
++  Scratchpad_Read  = 0b111
++}; // READ MODE
++
++enum {
++  Transmit_Holding = 0b000,
++  Interrupt_Enable = 0b001,
++  FIFO_control     = 0b010,
++  Line_Control     = 0b011,
++  Modem_Control    = 0b100,
++  Scratchpad_Write = 0b111
++}; // WRITE MODE
+
+ pthread_t thread_in;
+ pthread_mutex_t mutex_fifo_opt = PTHREAD_MUTEX_INITIALIZER;
+(1/3) Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]?
+</code></pre>
+<p>&#x8F93;&#x5165; <code>?</code> &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x5E2E;&#x52A9;:</p>
+<pre><code class="lang-git">y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+e - manually edit the current hunk
+? - print help
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x6682;&#x5B58;, &#x800C;&#x8DF3;&#x8FC7;&#x5269;&#x4F59;&#x7684;&#x90E8;&#x5206;, &#x5219;&#x6700;&#x7EC8;&#x7684;&#x6548;&#x679C;&#x4E3A;:</p>
+<pre><code class="lang-git">$ git status
+On branch pipeline
+Your branch is up to date with &apos;gitlab/pipeline&apos;.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+        modified:   playground/sim/src/cpu/csrcs/uart.cpp
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        modified:   playground/sim/src/cpu/AXI_UART.scala
+        modified:   playground/sim/src/cpu/csrcs/uart.cpp
+        modified:   playground/src/cpu/privileged/CSRs.scala
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;, &#x6211;&#x4EEC;&#x4EC5;&#x6682;&#x5B58;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;.</p>
+<h2 id="git-rebase">git rebase</h2>
+<p><code>git rebase &lt;branch&gt;</code> &#x662F;&#x4E00;&#x4E2A;&#x5341;&#x5206;&#x5F3A;&#x5927;&#x7684;&#x547D;&#x4EE4;, &#x5176;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E0E; <code>git merge &lt;branch&gt;</code>
+&#x5341;&#x5206;&#x7C7B;&#x4F3C;. &#x8BE5;&#x6307;&#x4EE4;&#x9996;&#x5148;&#x4F1A;&#x5BFB;&#x627E;&#x5F53;&#x524D;&#x5206;&#x652F;&#x4E0E; <code>branch</code> &#x5206;&#x652F;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;, &#x4E4B;&#x540E;&#x5C06;&#x5F53;&#x524D;&#x5206;&#x652F;
+&#x4ECE;&#x8BE5;&#x7956;&#x5148;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x7684;&#x6240;&#x6709;&#x63D0;&#x4EA4;&#x5168;&#x90E8;&#x79FB;&#x52A8;&#x5230; <code>branch</code> &#x5206;&#x652F;&#x7684;&#x9876;&#x7AEF;.</p>
+<h3 id="git-rebase-&#x4E0E;-git-merge-&#x7684;&#x533A;&#x522B;">git rebase &#x4E0E; git merge &#x7684;&#x533A;&#x522B;</h3>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x6E05;&#x6670;&#x5730;&#x8BF4;&#x660E;&#x8FD9;&#x4E8C;&#x8005;&#x7684;&#x533A;&#x522B;, &#x6211;&#x4EEC;&#x56DE;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x4F8B;&#x5B50;. 
+&#x65B9;&#x4FBF;&#x8D77;&#x89C1;, &#x6211;&#x4EEC;&#x5C06;&#x56FE;&#x91CD;&#x65B0;&#x642C;&#x5230;&#x4E0B;&#x9762;.</p>
+<p><img src="images/img4.svg" alt="bug &#x4FEE;&#x590D;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x4ED3;&#x5E93;"></p>
+<p>&#x6267;&#x884C; <code>git merge</code> &#x540E;&#x7684;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;:</p>
+<p><img src="images/img7.svg" alt="git merge&#x7684;&#x7ED3;&#x679C;"></p>
+<p>&#x6267;&#x884C; <code>git rebase</code> &#x540E;&#x7684;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;:</p>
+<p><img src="images/img8.svg" alt="git rebase"></p>
+<p>&#x5F53;&#x7136;, <code>git rebase</code> &#x8FD8;&#x6709;&#x66F4;&#x591A;&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;, &#x6709;&#x5174;&#x8DA3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;. </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x5510;&#x6D69;&#x664B;&#xB7;&#x9AD8;&#x6CFD;&#x5B87;&#xB7;&#x9648;&#x7490; 2021 &#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;<br><a href="http://www.beian.miit.gov.cn/" target="_blank">&#x4EAC;ICP&#x5907;20000818&#x53F7;-2</a></span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-07-10 16:35:48
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="开发流程和规范.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 开发流程和规范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"进阶操作","level":"1.4","depth":1,"previous":{"title":"开发流程和规范","level":"1.3","depth":1,"path":"开发流程和规范.md","ref":"开发流程和规范.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","-lunr","-search","search-pro","theme-comscore","tbfed-pagefooter","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 唐浩晋·高泽宇·陈璐 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"唐浩晋 <tanghaojin@outlook.com>; 陈璐; 高泽宇","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"进阶操作.md","mtime":"2021-07-10T08:35:48.138Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-10T09:45:08.319Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
