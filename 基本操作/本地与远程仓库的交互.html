@@ -1,0 +1,430 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>本地与远程仓库的交互 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="唐浩晋 <tanghaojin@outlook.com>; 陈璐; 高泽宇">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../开发流程和规范.html" />
+    
+    
+    <link rel="prev" href="从本地建立仓库.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Git 使用规范手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../入门/">
+            
+                <a href="../入门/">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../入门/Git简介.html">
+            
+                <a href="../入门/Git简介.html">
+            
+                    
+                    Git 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../入门/Git安装.html">
+            
+                <a href="../入门/Git安装.html">
+            
+                    
+                    Git 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基本操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="从本地建立仓库.html">
+            
+                <a href="从本地建立仓库.html">
+            
+                    
+                    从本地建立仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="本地与远程仓库的交互.html">
+            
+                <a href="本地与远程仓库的交互.html">
+            
+                    
+                    本地与远程仓库的交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../开发流程和规范.html">
+            
+                <a href="../开发流程和规范.html">
+            
+                    
+                    开发流程和规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../进阶操作.html">
+            
+                <a href="../进阶操作.html">
+            
+                    
+                    进阶操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >本地与远程仓库的交互</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x672C;&#x5730;&#x4E0E;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x4EA4;&#x4E92;">&#x672C;&#x5730;&#x4E0E;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x4EA4;&#x4E92;</h1>
+<h2 id="&#x4E3A;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">&#x4E3A;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h2>
+<p>&#x8981;&#x5C06;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;, &#x9996;&#x5148;&#x8981;&#x4E3A;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;:</p>
+<pre><code class="lang-git">$ git remote add &lt;name&gt; &lt;url&gt;
+</code></pre>
+<p>&#x4F8B;&#x5982;, &#x5982;&#x679C;&#x4F60;&#x5728; GitHub &#x4E0A;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>git-test</code> &#x7684;&#x4ED3;&#x5E93;, &#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;: </p>
+<pre><code class="lang-git">git remote add origin git@github.com:Tang-Haojin/git-test.git
+</code></pre>
+<blockquote>
+<p>[!NOTE]
+&#x8FD9;&#x91CC;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x91C7;&#x7528;&#x7684;&#x662F; ssh &#x534F;&#x8BAE;. &#x7406;&#x8BBA;&#x4E0A;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x534F;&#x8BAE;, &#x5982; http(s), 
+&#x4F46;&#x4ECB;&#x4E8E; https &#x534F;&#x8BAE;&#x5DF2;&#x7ECF;&#x88AB; GitHub &#x6807;&#x8BB0;&#x4E3A;&#x8FC7;&#x65F6;, &#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5728;&#x6B64;&#x4E0D;&#x4F5C;&#x4ECB;&#x7ECD;. </p>
+</blockquote>
+<h2 id="&#x5C06;&#x672C;&#x5730;&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">&#x5C06;&#x672C;&#x5730;&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h2>
+<p>&#x5C06;&#x672C;&#x5730;&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x662F;:</p>
+<pre><code class="lang-git">$ git push [options]
+</code></pre>
+<p>&#x5F53;&#x4F60;&#x7B2C;&#x4E00;&#x6B21;&#x4E3A;&#x672C;&#x5730;&#x5206;&#x652F;&#x63A8;&#x9001;&#x65F6;, &#x4F60;&#x9700;&#x8981;&#x4E3A;&#x672C;&#x5730;&#x5206;&#x652F;&#x8BBE;&#x7F6E;&#x8DDF;&#x8E2A;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;, &#x6B64;&#x65F6;&#x9700;&#x8981;&#x8FD0;&#x884C;:</p>
+<pre><code class="lang-git">$ git push -u &lt;remote&gt;
+</code></pre>
+<p>&#x5176;&#x4E2D; <code>remote</code> &#x4E3A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x540D;&#x5B57;, &#x4F8B;&#x5982; <code>origin</code>. &#x6B64;&#x540E;&#x8FDB;&#x884C;&#x63A8;&#x9001;&#x65F6;, &#x5C06;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x6307;&#x5B9A; <code>-u</code>
+&#x53C2;&#x6570;, &#x53EA;&#x9700;&#x8FD0;&#x884C; <code>git push</code> &#x5373;&#x53EF;. </p>
+<blockquote>
+<p>[!NOTE]
+&#x6B64;&#x5904; <code>origin</code> &#x5E76;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x542B;&#x4E49;, &#x53EA;&#x662F;&#x5982;&#x679C;&#x4F60;&#x4ECE;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x514B;&#x9686;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730;, 
+&#x90A3;&#x4E48;&#x8BE5;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5C06;&#x88AB;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x4E3A; <code>origin</code>. &#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5728;&#x4E4B;&#x540E;&#x901A;&#x8FC7; <code>git remote rename &lt;old&gt; &lt;new&gt;</code>
+&#x547D;&#x4EE4;&#x91CD;&#x547D;&#x540D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;, &#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x540D;&#x5B57;. </p>
+</blockquote>
+<h2 id="&#x4F7F;&#x7528;&#x5BC6;&#x94A5;&#x5BF9;">&#x4F7F;&#x7528;&#x5BC6;&#x94A5;&#x5BF9;</h2>
+<p>&#x7136;&#x800C;, &#x5F53;&#x4F60;&#x5C1D;&#x8BD5; push &#x4F60;&#x7684;&#x672C;&#x5730;&#x5206;&#x652F;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x65F6;, &#x4F60;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x5F97;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x547D;&#x4EE4;&#x8F93;&#x51FA;:</p>
+<pre><code>$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre><p>&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x56E0;&#x4E3A; ssh &#x534F;&#x8BAE;&#x9700;&#x8981;&#x4F60;&#x5728;&#x672C;&#x5730;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5206;&#x522B;&#x7528;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x79C1;&#x94A5;&#x548C;&#x516C;&#x94A5;. 
+&#x8981;&#x67E5;&#x770B;&#x4F60;&#x662F;&#x5426;&#x5728;&#x672C;&#x5730;&#x6709;&#x5BC6;&#x94A5;&#x5BF9;, &#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
+<pre><code class="lang-bash">$ ls ~/.ssh
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;. &#x5982;&#x679C;&#x5B58;&#x5728;&#x7C7B;&#x4F3C; <code>id_*</code>(&#x65E0;&#x540E;&#x7F00;) &#x548C; <code>id_*.pub</code> &#x7684;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;, 
+&#x5219;&#x8BF4;&#x660E;&#x4F60;&#x5728;&#x672C;&#x5730;&#x5DF2;&#x7ECF;&#x62E5;&#x6709;&#x4E86;&#x5BC6;&#x94A5;&#x5BF9;&#x4E86;. </p>
+<h3 id="&#x521B;&#x5EFA;&#x5BC6;&#x94A5;&#x5BF9;">&#x521B;&#x5EFA;&#x5BC6;&#x94A5;&#x5BF9;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x672C;&#x5730;&#x8FD8;&#x6CA1;&#x6709;&#x5BC6;&#x94A5;&#x5BF9;, &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
+<pre><code class="lang-bash">$ ssh-keygen -t ed25519 -C &lt;email&gt;
+</code></pre>
+<p>&#x6765;&#x521B;&#x5EFA;&#x5BC6;&#x94A5;&#x5BF9;. &#x5728;&#x4E4B;&#x540E;&#x7684;&#x6B65;&#x9AA4;&#x4E2D;&#x76F4;&#x63A5;&#x6309;&#x4E0B;&#x56DE;&#x8F66;, &#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>~/.ssh</code> &#x76EE;&#x5F55;&#x4E0B;&#x5F97;&#x5230; <code>id_ed25519</code>
+&#x548C; <code>id_ed25519.pub</code> &#x4E24;&#x4E2A;&#x6587;&#x4EF6;, &#x5176;&#x4E2D; <code>id_ed25519</code> &#x4E3A;&#x79C1;&#x94A5;, &#x4F60;&#x5E94;&#x8BE5;&#x59A5;&#x5584;&#x4FDD;&#x7BA1;&#x5B83;, 
+&#x4E0D;&#x80FD;&#x8BA9;&#x9664;&#x4F60;&#x4EE5;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x4EBA;&#x5F97;&#x5230;. </p>
+<h3 id="&#x5C06;&#x516C;&#x94A5;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">&#x5C06;&#x516C;&#x94A5;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h3>
+<p>&#x4E0D;&#x540C;&#x7684;&#x4ED3;&#x5E93;&#x6258;&#x7BA1;&#x5E73;&#x53F0;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6DFB;&#x52A0;&#x516C;&#x94A5;&#x7684;&#x65B9;&#x6CD5;. &#x4EE5; GitHub &#x4E3A;&#x4F8B;, &#x4F60;&#x9996;&#x5148;&#x9700;&#x8981;&#x590D;&#x5236;&#x4F60;&#x7684;&#x516C;&#x94A5;:</p>
+<pre><code class="lang-bash">cat ~/.ssh/id_ed25519.pub
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728; <a href="https://github.com/settings/keys" target="_blank">https://github.com/settings/keys</a> &#x4E2D;&#x70B9;&#x51FB; &quot;New SSH key&quot; &#x6309;&#x94AE;, 
+&#x5C06;&#x4F60;&#x521A;&#x521A;&#x590D;&#x5236;&#x7684;&#x516C;&#x94A5;&#x7C98;&#x8D34;&#x8FDB;&#x53BB;&#x5373;&#x53EF;. </p>
+<footer class="page-footer"><span class="copyright"><a href="mailto:tanghaojin18@mails.ucas.ac.cn" target="_blank">&#x5510;&#x6D69;&#x664B;</a>&#xB7;&#x9AD8;&#x6CFD;&#x5B87;&#xB7;&#x9648;&#x7490; 2021<br><a href="http://www.beian.miit.gov.cn/" target="_blank">&#x4EAC;ICP&#x5907;20000818&#x53F7;-2</a></span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-07-18 18:03:24
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="从本地建立仓库.html" class="navigation navigation-prev " aria-label="Previous page: 从本地建立仓库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../开发流程和规范.html" class="navigation navigation-next " aria-label="Next page: 开发流程和规范">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"本地与远程仓库的交互","level":"1.3.2","depth":2,"next":{"title":"开发流程和规范","level":"1.4","depth":1,"path":"开发流程和规范.md","ref":"开发流程和规范.md","articles":[]},"previous":{"title":"从本地建立仓库","level":"1.3.1","depth":2,"path":"基本操作/从本地建立仓库.md","ref":"基本操作/从本地建立仓库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","-lunr","-search","search-pro","theme-comscore","tbfed-pagefooter","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<a href=\"mailto:tanghaojin18@mails.ucas.ac.cn\">唐浩晋</a>·高泽宇·陈璐 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"唐浩晋 <tanghaojin@outlook.com>; 陈璐; 高泽宇","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"基本操作/本地与远程仓库的交互.md","mtime":"2021-07-18T10:03:24.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-18T10:09:23.538Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
